@@ -4,8 +4,7 @@ import { demoProfilePicture } from '../utils/constants';
 import { flattenOptionGroups } from '@mui/base';
 import { CardContent, CardMedia, Box, Typography } from '@mui/material';
 
-const ChannelCard = ({ channelDetail }) => {
-  console.log('channelDetail', channelDetail);
+const ChannelCard = ({ channelDetail, marginTop }) => {
   return (
     <Box
       sx={{
@@ -15,8 +14,9 @@ const ChannelCard = ({ channelDetail }) => {
         justifyContent: 'center',
         alignItems: 'center',
         width: { xs: '350px', md: '320px' },
-        height: '326px', 
+        height: '326px',
         margin: 'auto',
+        marginTop: marginTop,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
